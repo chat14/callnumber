@@ -218,3 +218,36 @@ $(document).ready(function() {
 } );
  
 	</script>
+(ส่วนควบคุมการทำงานทั้งหมดวางหลัง(/html)
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$(".btn_edit").on('click',function(){
+		$.ajax({
+		  url :"foredit.php" ,
+		  data:"id="+$(this).attr("id"),
+		  type:"GET",
+		  beforeSend: function(){
+			  
+		  },
+		  success : function(result){
+			  
+			  $("#addbook_dialog_modal").html('');
+			  $("#addbook_dialog_modal").html(result);
+			  $("#addbookModal").modal('show');
+		  },
+		  error : function(error){
+			  alert(error.responseText);
+		  }
+		  
+		});
+	});	
+});
+</script>
+ 
+<!-- Large modal -->
+<button type="button" class="btn btn-primary btn-lg  sr-only" id="btn_msg1" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
+<div class="modal fade" id="addbookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" id="addbook_dialog_modal" role="document"></div>
+</div>
