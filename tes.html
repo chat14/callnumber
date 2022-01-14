@@ -27,7 +27,7 @@ background-color: #d24dff
 }
 
 /* The popup form - hidden by default */
-.form-popup {
+.form-popup , .form-popup2{
   display: none;
   position: fixed;
   bottom: 0;
@@ -37,14 +37,15 @@ background-color: #d24dff
 }
 
 /* Add styles to the form container */
-.form-container {
+.form-container , .form-container2 {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container input[type=password] , .form-container2 input[type=text], .form-container2 input[type=password]
+  {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -53,13 +54,14 @@ background-color: #d24dff
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus, .form-container input[type=password]:focus ,form-container2 input[type=text]:focus, .form-container2 input[type=password]:focus 
+   {
   background-color: #ddd;
   outline: none;
 }
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+.form-container .btn , .form-container2 .btn2 {
   background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -71,12 +73,13 @@ background-color: #d24dff
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+.form-container .cancel , .form-container2 .cancel2 {
   background-color: red;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover , form-container2 .btn2:hover, .open-button2:hover 
+{
   opacity: 1;
 }
 </style>
@@ -84,11 +87,11 @@ background-color: #d24dff
 <bod>
 <p>สู่การเรียนรู้ชั้นสูง</p>
 <table border="1"  bordercolor="blue" width="60%"  height="20%"><caption>  保姆喂许多国家的牛奶 </ caption >
-
+<div class="form-popup" id="myForm">
 <tr><td><p>เตรียมไฟล์รูปภาพ+ข้อความสินค้า
 <button class="open-button" onclick="openForm()">Open Form</button>
 
-<div class="form-popup" id="myForm">
+
   <form class="form-container"
     <h1>Login</h1>
 
@@ -149,12 +152,12 @@ background-color: #d24dff
   </form>
 </div>
 </td>
-<div class="form-popup" id="myForm2">
+<div class="form-popup2" id="myForm2">
 <td><p>เตรียมไฟล์รูปภาพ+ข้อความสินค้า
-<button class="open-button2" onclick="openForm2()">Open Form2</button>
+<button class="open-button2" onclick="openForm2()">tes</button>
 
 
-  <form class="form-container"
+  <form class="form-container2"
     <h1>Login</h1>
 
     <a href="https://www.linkpicture.com/q/IMG_20220113_122938_404.jpg" type="image">
@@ -209,8 +212,8 @@ background-color: #d24dff
          <input type="text" id="card-billing-address-country" name="card-billing-address-country" autocomplete="off" placeholder="country code" />
        </div>
        <br/><br/>
-       <button value="submit" id="submit" class="btn">Pay</button>
-     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+       <button value="submit" id="submit" class="btn2">Pay</button>
+     <button type="button" class="btn2 cancel2" onclick="closeForm2()">Close</button>
   </form>
 </div>
 </td></tr>
