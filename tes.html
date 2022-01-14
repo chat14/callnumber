@@ -13,7 +13,7 @@ background-color: #d24dff
 {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
+.open-button , .open-button2 {
   background-color: #555;
   color: white;
   padding: 16px 20px;
@@ -150,7 +150,7 @@ background-color: #d24dff
 </div>
 </td>
 <td><p>เตรียมไฟล์รูปภาพ+ข้อความสินค้า
-<button class="open-button" onclick="openForm()">Open Form2</button>
+<button class="open-button2" onclick="openForm()">Open Form2</button>
 
 <div class="form-popup" id="myForm">
   <form class="form-container"
@@ -218,9 +218,14 @@ background-color: #d24dff
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
-
+function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+}
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+}
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
 }
 </script>
 <!-- Implementation -->
