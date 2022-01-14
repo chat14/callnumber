@@ -82,15 +82,9 @@ background-color: #d24dff
 </style>
 </head>
 <bod>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+<p>สู่การเรียนรู้ชั้นสูง</p>
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
+<button class="open-button" onclick="openForm()">Open Form</button>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -106,5 +100,15 @@ function closeForm() {
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
 </bod>
 </html>
