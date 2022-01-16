@@ -1,6 +1,16 @@
 <html>
 <haed>
-bod{ 
+<mets charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> </head>
+<link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
+  </link>
+<mets data_path="https://github.com/chat14/callnumber">
+<style>
+body {
+background-color: #d24dff
+}
+
+
 position: relative;
 } 
 .divmsg {
@@ -10,28 +20,31 @@ top: 50%;
 width: 500px; 
 Height: 250px
 Type: blocks
-light blue
+color: blue
 }
+</style>
 </haed>
 <bod>
 <div="divmsg" id="divmsg usemsg1+2">
 <div calss="usemsg1">
+<input type="text"id="chat1"name="usemsg1">
 <button type="button"name="subtmi" id="chat1" alert="divmsg">
 ส่งแชท</button>
 <div calss="usemsg2">
+<input type="text"id="chat2"name="usemsg2">
 <button type="button"name="subtmi" id="chat2" alert="divmsg">
 แชทด่วน</button>
-<sypetr>
+<script>
 calss usemsg1{
   var chat1("txt")
 }
-</syptr>
-<syptr>
+</script>
+<script>
 calss usemsg2{
   var chat2("txt")
 }
-</syptr>
-<srept>
+</script>
+<script>
   function divmsg {
 var usemsg1=prompt("{txt}")
 var usemsg2=prompt("{txt}")
@@ -53,6 +66,6 @@ document.getElementByID(divmsg usemsg1+2)
     {
 divmsg
   }
-</syptr>
+</script>
 </bod>
 </html>
